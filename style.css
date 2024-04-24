@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* css variables */
+
+    /* ### Primary */
+:root{
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    /* ### Neutral */
+
+    --Off-white: hsl(36, 100%, 99%);
+   --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+
+body {
+    font-family: "inter";
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 0 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    animation: 2s ease-in slidefromtop;
+}
+
+
+
+.links ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.links ul li {
+    list-style: none;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    transition: 0.5s color ease;
+}
+
+.links ul li a:hover{
+    color: var(--Soft-red);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+
+aside {
+    animation: 2s ease-in slidefromside;
+}
+
+
+.new_articles {
+
+    background-color:hsl(240, 100%, 5%) ;
+  
+    font-family: 'Inter', sans-serif;
+  
+    color: hsl(36, 100%, 99%);
+  
+    padding: 1em;
+  
+  }
+  
+  .heading {
+  
+    font-size:2.5em ;
+  
+    margin-top: 7px;
+  
+    color:var(--Soft-orange) ;
+  
+  }
+
+  .article {margin:25px 5px;}
+
+ 
+
+.article a{
+
+  color: hsl(36, 100%, 99%);
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: 0.5s color ease;
+
+
+}
+
+article a:hover{
+    color: var(--Soft-orange);
+}
+
+.hero_text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.hero_text h1{
+    font-size: 3rem;
+}
+
+.button {
+    background-color:hsl(5, 85%, 63%) ;
+    padding: 1em 1.5em;
+    display: inline-block;
+    margin-top: 1.5em;
+    text-decoration: none;
+    color: hsl(36, 100%, 99%) ;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    transition: 0.5s background-color ease;
+
+  
+  }
+
+.button:hover {
+    background-color: var(--Very-dark-blue);
+}
+
+
+.articles {
+    display: flex;
+    gap: 1rem;
+    margin: 4rem 0;
+}
+
+.new_article {
+    display: flex;
+    gap: 1rem;
+}
+
+.new_article .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.new_article img{
+   max-width:120px;
+}
+
+.content h2 {
+    color: hsl(233, 8%, 79%);
+    font-size: 2em;
+  }
+
+.content h3 {
+    transition: 0.5s color ease;
+
+} 
+  
+.content h3:hover {
+    color: var(--Soft-red);
+}
+
+/* dektop first approah use max width otherwise use min-width */
+
+@media screen and (max-width:800px) {
+    .hero{
+        grid-template-columns: 1fr;
+    }
+
+    .articles {
+        flex-direction: column;
+    }
+}
+
+
+/* Animation */
+
+@keyframes slidefromside {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidefromtop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+   
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
