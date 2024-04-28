@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where We Are</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="trending.css" />
+
+</head>
+<body>
+    <header>
+        <div class="header">
+          <h3 class="title">Where in the world?</h3>
+          <div id="theme" class="theme">
+            <img id="moon" class="moon" src="icons/moon-solid.svg" alt="" />
+            <span class="mode-text">Dark Mode</span>
+          </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="home" class="home">
+          <div id="menu" class="menu">
+            <div id="search-bar" class="search-bar">
+              <img
+                id="search-icon"
+                class="search-icon"
+                src="icons/search-solid.svg"
+                alt=""
+              />
+              <input
+                id="search"
+                class="search"
+                type="text"
+                placeholder="Search for a country..."
+              />
+            </div>
+            <div id="filter" class="filter">
+              <div class="selector">
+                <span>Filter By Region</span>
+                <div class="triangle"></div>
+              </div>
+              <div class="options">
+                <div class="region" data-value="All">All</div>
+                <div class="region" data-value="Asia">Asia</div>
+                <div class="region" data-value="Africa">Africa</div>
+                <div class="region" data-value="Europe">Europe</div>
+                <div class="region" data-value="Americas">Americas</div>
+                <div class="region" data-value="Oceania">Oceania</div>
+                <div class="region" data-value="Polar">Polar</div>
+              </div>
+            </div>
+          </div>
+          <div class="loading">
+            <img
+              class="loading-icon"
+              src="icons/loadingIcon.gif"
+              alt="Loading..."
+            />
+          </div>
+          <div id="main"></div>
+        </div>
+       
+    </main>
+      <script src="main.js"></script>
+</body>
+</html>
